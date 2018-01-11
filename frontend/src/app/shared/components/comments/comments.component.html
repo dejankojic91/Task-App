@@ -1,0 +1,35 @@
+<!--DISPLAY ALL COMMENTS-->
+<div class="timeline-entry" *ngFor="let comment of comments;">
+        <div class="timeline-stat">
+            <div class="timeline-icon">
+                <div class="picture-background-fallback" [ngStyle]="{'background-image': 'url('+ defaultUserImage + ')'}" style="width:39px;height:39px;">
+                    <div class="profile-icon-bg">
+                        <img *ngIf="comment.CreatedBy?.ImageLink" class="img-circle img-xs" [src]="comment.CreatedBy.ImageLink" (error)="pictureError($event)" alt="Profile Picture">
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-time">{{ comment.Modified }}</div>
+        </div>
+        <div class="timeline-label" (mouseenter)="comment.editvisible = true;" (mouseleave)="comment.editvisible = false;">
+    
+            <div *ngIf="!comment.livevisible">
+                <span class="text-bold">{{ comment.CreatedBy.Value }}</span>
+                <div  class="comment_br" [innerHTML]="byPassSecurity(comment.Comments)"></div>
+            </div>
+    
+            <div *ngIf="comment.livevisible">
+                <div class="row">
+                    <div class="col-xs-10">
+                        <textarea value="{{ comment.Comments }}" id="ta-{{ comment.Id }}" style="width: 100%; resize:none;" class="form-control" placeholder="Add your comment" rows="3"></textarea>
+                    </div>
+                    <div class="col-xs-2" style="margin-top: 15px;">
+                        <button class="btn btn-petrol" style="color: white;" type="button" [disabled]="saving" (click)="submitComment($event, comment.Id)">Update</button>
+                        <button class="btn btn-petrol" style="color: white;" type="button" [disabled]="saving" (click)="hideCommentArea($event, comment)">Cancel</button>
+                    </div>
+                </div>
+            </div>
+    
+          <span class="pencil_comment" *ngIf="comment.CreatedBy.Id == currentUserId && comment.editvisible && !comment.livevisible" (click)="showCommentArea(comment)"><i  class="fa fa-pencil" aria-hidden="true"></i></span>
+        </div>
+    </div>
+    

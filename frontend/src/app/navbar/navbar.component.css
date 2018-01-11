@@ -1,0 +1,35 @@
+
+
+.dropdown-menu{
+    right: 0px;
+    left: auto;
+}
+
+.active-member{
+  background-color: #C8A0A0;
+}
+.member-item>a:hover {
+  background-color: #C8A0A0;
+}
+.active-task{
+  background-color: #C8DCB4;
+}
+
+.task-item>a:hover {
+  background-color: #C8DCB4;
+}
+
+.navbar-top-links>.active-member>a:hover {
+    background-color: #C8A0A0;
+}
+.navbar-top-links>.active-task>a:hover {
+  background-color: #C8DCB4;
+}
+
+.dropdown-menu .divider {
+   margin: 0px 0; 
+}
+
+.dropdown-menu:not(.head-list)>li>a {
+  padding: 10px 10px;
+}

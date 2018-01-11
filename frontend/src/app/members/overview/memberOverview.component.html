@@ -1,0 +1,55 @@
+<div id="content-container">
+    <div id="page-title">
+        <div class="row">
+            <div class="col-sm-8">
+            </div>
+            <div class="col-sm-4 clearfix">
+                <!-- Searchbox -->
+            </div>
+        </div>
+    </div>
+    <div id="page-content">
+        <div id="members-card-view">
+            <div class="row mar-btm">
+                <div class="col-md-4 col-lg-3 col-sm-12 custom-panel-member" *ngFor="let member of members">
+                    <a [routerLink]="['/members/display', member._id]">
+                        <div id="demo-panel-w-alert" class="panel bg-white custom-panel-member">
+                            <!--Panel Header-->
+                            <div class="media panel-header member-header" >
+                                <!--Member Image-->
+                                <div class="media-left">
+                                    <img alt="Profile Picture" class="img-md img-circle" [src]="member.profileImage">
+                                </div>
+                                <!--Member First and Last Name-->
+                                <div class="media-body pad-top">
+                                    <span class="text-lg text-semibold">{{member.firstName}}, {{member.lastName}}</span>
+                                    <p class="text-sm">{{member.function}}</p>
+                                </div>
+                            </div>
+                            <!--Panel Header-->
+                            <!--Panel Body-->
+                            <div class="list-group bg-trans panel-body">
+                                <span class="list-group-item">
+                                    <i class="ion-ios-telephone"></i>
+                                    {{member?.phoneNumber}}
+                                </span>
+                                <span class="list-group-item">
+                                    <i class="fa fa-mobile"></i>
+                                    {{member?.mobilePhoneNumber}}
+                                </span>
+                                <span class="list-group-item">
+                                    <i class="ion-ios-email"></i>
+                                    {{member.email}}
+                                </span>
+                            </div>
+                            <!--Panel Footer-->
+                            <div class=" panel-footer">
+                                <span class="label label-default" *ngIf="member.group">{{member.group}}</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

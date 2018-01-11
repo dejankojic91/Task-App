@@ -1,0 +1,127 @@
+.task-form{
+    margin-top: 30px;
+    font-size: 20px;
+    /* -webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.75); */
+    -moz-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.75);
+    /* box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.75); */
+    padding: 20px;
+    background-color: #fff;
+}
+
+.form-horizontal .control-label{
+    text-align: left;
+}
+.tab-pane{
+    padding: 20px;
+}
+
+.mail-attach-list > li .mail-file-img, .mail-attach-list > li .mail-file-icon {
+    width: 95px;
+    height: 75px;
+}
+
+.thumbnail {
+  /*height: 198px;*/
+  width: 107px;
+  height: 150px;
+  overflow: hidden;
+  float: left;
+}
+
+.mail-attach-list > li {
+  width: 129px;
+  position: relative;
+}
+
+
+
+
+.mail-attach-list > li i {
+  font-size: 39px;
+  line-height: 75px;
+}
+
+.caption_text {
+    height: 48px;
+    overflow: hidden;
+}
+
+.caption_text p {
+    font-size: 13px;
+}
+
+.remove-file-btn{
+    top: -4px;
+    right: 13px;
+    cursor: pointer;
+    border: 1px solid #00677f;
+    background: #00677f;
+    color: #fff;
+    position: absolute;
+    width: 26px;
+    height: 27px;
+    border-radius: 50%;
+    font-size: 14px;
+    padding: 4px 7px;
+}
+.mail-attach-list{
+    margin-top: 25px;
+}
+
+#page-title{
+    margin-bottom: 20px;
+}
+#page-content {
+    padding: 15px 15px 0;
+}
+
+.member-header{
+    background-color: #C8DCB4;
+    color: #2b425b;
+}
+
+#form-panel{
+    margin-left: 220px;
+    margin-top: 60px;
+}
+.member-header .img-circle{
+    padding: 10px;
+}
+
+.panel-footer{
+    height: 55px;
+}
+
+.text-lg {
+    font-size: 2em;
+}
+.text-sm{
+    font-size: 1.8em
+}
+
+.form-horizontal .control-label {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.panel-body{
+    background-color: #fff;
+    padding: 0px;
+}
+.custom-panel-member{
+    height: 860px;
+}
+
+.task-form{
+    height: 760px;
+}
+
+.media-body{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0px;
+}

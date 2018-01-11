@@ -1,0 +1,43 @@
+<ul class="nav navbar-top-links pull-left">
+    <!--Tasks-->
+    <li *ngIf="isLoggedIn()" class="navigation-item task-item" [routerLinkActive]="['active-task']" style="cursor:pointer;">
+        <a routerLink="/tasks"><strong>Tasks</strong></a>
+    </li>
+    <!--Tasks-->
+    <!--Members-->
+    <li *ngIf="isLoggedIn()" class="navigation-item member-item" [routerLinkActive]="['active-member']" style="cursor:pointer;">
+        <a routerLink="/members"><strong>Members</strong></a>
+    </li>
+    <!--Members-->
+</ul>
+
+<ul class="nav navbar-top-links pull-right">
+    <!--Login-->
+    <li *ngIf="!isLoggedIn()"  [routerLinkActive]="['active']" class="navigation-item" style="cursor:pointer;">
+        <a  routerLink="/login"><strong>Login</strong></a>
+    </li>
+    <!--Login-->
+    <!--Register-->
+    <li *ngIf="!isLoggedIn()" [routerLinkActive]="['active']" class="navigation-item" style="cursor:pointer;">
+        <a routerLink="/register"><strong>Register</strong></a>
+    </li>
+    <!--Register-->
+
+    <!--User dropdown-->
+    <li *ngIf="isLoggedIn()" id="dropdown-user" class="btn-group navigation-item" dropdown>
+        <a dropdownToggle type="button" class="dropdown-toggle text-right" style="cursor:pointer;">
+            <strong><i class="fa fa-cog" aria-hidden="true"></i> Settings</strong>
+        </a>
+        <!--Personal Information-->
+        <ul *dropdownMenu class="dropdown-menu" role="menu">
+            <li role="menuitem"><a class="dropdown-item" routerLink="/editAccount">Personal Information</a></li>
+        </ul>
+        <!--Personal Information-->
+    </li>
+
+    <!--Log out-->
+    <li *ngIf="isLoggedIn()" [routerLinkActive]="['active']" class="navigation-item" style="cursor:pointer;">
+        <a (click)="logOut()"><strong>Log out</strong></a>
+    </li>
+    <!--Log out-->
+</ul>

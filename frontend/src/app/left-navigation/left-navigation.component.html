@@ -1,0 +1,58 @@
+<nav id="mainnav-container" *ngIf="isLoggedIn()" >
+        <div id="mainnav">
+            <!--Menu-->
+            <div id="mainnav-menu-wrap">
+                <div class="nano">
+                    <div class="nano-content">
+                        <!--Profile Widget-->
+                        <!--================================-->
+                        <div id="mainnav-profile" class="mainnav-profile">
+                            <div class="profile-wrap">
+                                <div class="media-left pos-rel">
+                                    <img class="img-circle img-xs" [src]="user?.profileImage" alt="Profile Picture">
+                                </div>
+                                <div class="media-body">
+                                    <p class="mnp-name">{{ user?.firstName }} {{ user?.lastName }}</p>
+                                    <small class="text-muted">{{ user?.email}}</small>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="mainnav-widget-content pad-no" style="padding-left:0px;">
+                            <ul class="list-group bg-trans">
+                                <li class="list-group-item">
+                                    <div class="pull-right">
+                                        <input id="demo-online-status-checkbox" class="toggle-switch" type="checkbox">
+                                        <label for="demo-online-status-checkbox"></label>
+                                    </div>
+                                    New
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="pull-right">
+                                        <input id="demo-show-off-contact-checkbox" class="toggle-switch" type="checkbox">
+                                        <label for="demo-show-off-contact-checkbox"></label>
+                                    </div>
+                                    In Progress
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="pull-right">
+                                        <input id="demo-show-device-checkbox" class="toggle-switch" type="checkbox">
+                                        <label for="demo-show-device-checkbox"></label>
+                                    </div>
+                                    Closed
+                                </li>
+                                <li class="list-group-item" style="margin-top: 28px !important;">
+                                    <div class="pull-right">
+                                        <input id="toggle-switch-example-2" class="toggle-switch" type="checkbox">
+                                        <label for="toggle-switch-example-2Label"></label>
+                                    </div>
+                                    My Tasks
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End menu-->
+        </div>
+    </nav>

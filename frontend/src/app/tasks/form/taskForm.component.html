@@ -1,0 +1,109 @@
+<div id="form-panel">
+  <div class="col-sm-8 col-sm-offset-2">
+    <div  class="panel bg-white custom-panel-member">
+      <!--Panel Header-->
+      <div class="media panel-header member-header" >
+
+          <!--Member First and Last Name-->
+          <div class="media-body pad-top">
+              <p class="text-sm">{{taskHeader}}</p>
+          </div>
+      </div>
+      <!--Panel Header-->
+      <!--Panel Body-->
+      <div class="list-group bg-trans panel-body">
+        <div class="task-form col-md-12">
+          <form class="form-horizontal" #f="ngForm" (ngSubmit)="onSubmitTask(f)">
+            <tabset [justified]="true">
+              <tab>
+                <ng-template tabHeading>
+                  <span class="">Basic Data</span>
+                </ng-template>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="title">Title:</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="title" placeholder="" name="title" ngModel>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="date">Date:</label>
+                  <div class="col-sm-8">
+                    <my-date-picker name="date" [options]="myDatePickerOptions" (dateChanged)="onDateChanged($event)" [(ngModel)]="date" required></my-date-picker>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="description">Description:</label>
+                  <div class="col-sm-8">
+                    <textarea name="text" class="form-control" id="email" placeholder="" name="description" ngModel cols="30" rows="10"></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="fileinput fileinput-new" data-provides="fileinput">
+                    <span class="btn btn-default btn-file">
+                      <span>Choose files</span>
+                      <input type="file" id="files" name="files" type="file" (change)="fileChangeEvent($event)" multiple/>
+                    </span>
+                  </div>
+                  <div class="col-sm-12">
+                    <ul class="mail-attach-list list-ov file_list">
+                      <li id="attach_li" *ngFor="let file of uploadedFiles; let i = index">
+                        <a id="doc" class="thumbnail">
+                          <div class="mail-file-icon">
+                            <!--<i class="pli-file"></i>-->
+                            <!--<i [ngClass]="typeUploadedFiles(file.name)"></i>-->
+                          </div>
+                          <div class="caption caption_text">
+                            <p class="text-primary mar-no">{{file.name}}</p>
+                          </div>
+                        </a>
+                        <p class="number_att_files remove-file-btn" (click)="removeSelectedFile(uploadedFiles, i)">X</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </tab>
+              <tab>
+                <ng-template tabHeading>
+                  <span class="">Details</span>
+                </ng-template>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="priority">Priority:</label>
+                  <div class="col-sm-8">
+                    <select id="priority" class="form-control" [ngModel]="defaultPriority" name="priority">
+                      <option value="Low">Low</option>
+                      <option value="Middle">Middle</option>
+                      <option value="High">High</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="problemStatus">Problem status:</label>
+                  <div class="col-sm-8">
+                    <select id="problemStatus" class="form-control" [ngModel]="defaultProblemStatus" name="problemStatus">
+                      <option value="Low">Low</option>
+                      <option value="Middle">Middle</option>
+                      <option value="High">High</option>
+                    </select>
+                  </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="dateOfCompletion">Date of completion:</label>
+                <div class="col-sm-8">
+                  <my-date-picker name="dateOfCompletion" [options]="myDatePickerOptions" (dateChanged)="onDateOfCompletionChanged($event)" [(ngModel)]="dateOfCompletion" required></my-date-picker>
+                </div>
+              </div>
+            </tab>
+          </tabset>
+          <div class="footer">   
+            <button class="btn btn-primary" type="button" *ngIf="isVisible()" (click)="activateTask()">Save and Activate</button>
+            <button class="btn btn-primary" type="button" *ngIf="isVisible()" (click)="saveAsDraft()">Save as Draft</button>
+            <button class="btn btn-primary" type="submit" *ngIf="!isVisible()">Save</button>
+            <button class="btn btn-primary" type="button" (click)="closeForm()">Cancle</button>
+          </div>
+        </form>
+        </div>
+      </div>
+      <!--Panel Body-->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,681 @@
+.label-progress{
+    background-color: #e69123;
+}
+
+.label-completed{
+    background-color: #6ea046;
+}
+
+.label-new{
+    background-color: #00677f;
+}
+
+.badge-petrol {
+    background-color: #00677f;
+}
+
+.btn-petrol {
+    background-color: #00677f !important;
+}
+
+.badge-petrol-1 {
+    background-color: #003340;
+}
+
+.badge-petrol-2 {
+    background-color: #004355;
+}
+
+.badge-petrol-3 {
+    background-color: #00566a;
+}
+
+.badge-petrol-4 {
+    background-color: #007a93;
+}
+
+.badge-petrol-5 {
+    background-color: #5097ab;
+}
+
+.badge-petrol-6 {
+    background-color: #79aebf;
+}
+
+.badge-petrol-7 {
+    background-color: #a6cad8;
+}
+
+.badge-deep-red {
+    background-color: #72170c;
+}
+
+.badge-deep-red-1 {
+    background-color: #440e07;
+}
+
+.badge-deep-red-2 {
+    background-color: #5a130a;
+}
+
+.badge-deep-red-3 {
+    background-color: #9f1924;
+}
+
+.badge-deep-red-4 {
+    background-color: #ff0000;
+}
+.badge-deep-red-5 {
+    background-color: #8c463c;
+}
+
+.badge-deep-red-6 {
+    background-color: #aa736e;
+}
+
+.badge-deep-red-7 {
+    background-color: #c8a0a0;
+}
+
+.badge-deep-red-8 {
+    background-color: #e6d2d2;
+}
+
+.badge-cool-grey {
+    background-color: #e6e6e6;
+}
+
+.badge-cool-grey-1 {
+    background-color: #444444;
+}
+
+.badge-cool-grey-2 {
+    background-color: #707070;
+}
+
+.badge-cool-grey-3 {
+    background-color: #9e9e9e;
+}
+
+.badge-cool-grey-4 {
+    background-color: #c8c8c8;
+}
+
+.badge-orange {
+    background-color: #e69123;
+}
+
+.badge-orange-1 {
+    background-color: #eba550;
+}
+
+.badge-orange-2 {
+    background-color: #f0be7d;
+}
+
+.badge-orange-3 {
+    background-color: #f5d2aa;
+}
+
+.badge-orange-4 {
+    background-color: #fae6d2;
+}
+
+.navigation-item {
+    font-size: 16px;
+}
+
+
+/*Change CSS Files for Design on Premise*/
+
+#mainnav-menu-wrap {
+    height: 144% !important;    
+}
+
+.nano-content {
+    background-color: white !important;
+}
+
+/*Navigation Global*/
+
+
+/*Misc Icon Size*/
+
+.icon-3x {
+    font-size: 2em !important;
+}
+
+
+/*Task Content Icons Size "Folder"*/
+
+.panel {
+    margin-top: -12px !important;
+}
+/*
+.panel-heading {
+    margin-top: 12px;
+}*/
+
+/*Searchbox*/
+/*
+.searchbox {
+    float:left;
+    margin-left: 763px;
+}*/
+
+
+/*Warning Button*/
+
+.btn-warning-basic, .btn-warning, .btn-warning:focus, .btn-warning.disabled:hover, :disabled.btn-warning:hover, .btn-hover-warning:hover, .btn-hover-warning:active, .btn-hover-warning.active, .btn.btn-active-warning:active, .btn.btn-active-warning.active, .dropdown.open > .btn.btn-active-warning, .btn-group.open .dropdown-toggle.btn.btn-active-warning {
+    float: left;
+}
+
+.btn-warning-basic, .btn-warning, .btn-warning:focus, .btn-warning.disabled:hover, :disabled.btn-warning:hover, .btn-hover-warning:hover, .btn-hover-warning:active, .btn-hover-warning.active, .btn.btn-active-warning:active, .btn.btn-active-warning.active, .dropdown.open > .btn.btn-active-warning, .btn-group.open .dropdown-toggle.btn.btn-active-warning .mail-attach-list > li i {
+        background-color: #e69123;
+        border-color: #e69123;
+} 
+
+.mail-attach-list > li .mail-file-img, .mail-attach-list > li .mail-file-icon {
+    width: 120px;
+}
+
+.mail-attach-list > li {
+    width: 129px !important;
+}
+
+.mail-attach-list > li i {
+    font-size: 52px !important;
+}
+
+
+#mainnav-menu a {
+    padding-bottom: 12px !important;
+    padding-top: 12px !important;
+    margin-bottom: -5px !important;
+}
+
+.list-group-item {
+    padding-top: 2px !important; 
+    padding-bottom: 0px !important;
+}
+
+#mainnav .list-divider {
+	margin-top: 15px !important;
+}
+
+.mainnav-profile .profile-wrap {
+	padding-left: 15px !important;
+}
+
+.button-return {
+    margin-left: 937px;
+}
+
+.btn-lg, .btn-group-lg > .btn, .btn-icon.btn-lg {
+    padding: 7px;
+}
+
+/*SideNav Background color and so on*/
+
+.active-sub:hover {
+    /*background-color: #a6cad8;*/
+    transition-duration: 0.4s;
+    transition-delay: 0s;
+    transition-timing-function: ease;
+    transition-property: all;
+}
+
+.menu-link:hover {
+    /*background-color: #a6cad8;*/
+    transition-duration: 0.4s;
+    transition-delay: 0s;
+    transition-timing-function: ease;
+    transition-property: all;
+}
+
+.daimler-color-nav-left:hover {
+    /*background-color: #a6cad8;*/
+    transition-duration: 0.4s;
+    transition-delay: 0s;
+    transition-timing-function: ease;
+    transition-property: all;
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+    /*background-color: #a6cad8 !important;*/
+}
+
+.nav > li > a:focus, .nav > li > a:active {
+   /* background-color: #a6cad8 !important;*/
+}
+ 
+.label-progress {
+    float: left !important;
+    margin-top: 12px;
+    margin-left: 10px;
+}
+
+.pie-title-center {
+    padding-top: 5px;
+}
+
+/*Task Details*/
+
+.text-adjusted {
+    font-size: 20px; /*Date Task Detail Site*/
+}
+
+.pie-title-center {
+    margin-right: -5px !important;
+    margin-top: -10px !important;
+}
+
+.panel-title {
+    line-height: 41px !important;
+    font-weight: normal !important;
+}
+
+.panel-custom-details-percent {
+    padding-left: 933px;
+    margin-top: -119px;
+}
+
+.label-custom-title {
+    line-height: 47px;
+}
+
+.panel-custom-details-text {
+    width: 800px;
+}
+
+.col-md-8 {
+    /*height: 50px;*/
+}
+
+.page-header {
+    margin-left: -9px;
+}
+
+.custom-body {
+    height: 60px;
+    line-height: 56px;
+    padding-left: 22px;
+}
+
+
+.col-sm-6 {
+    padding-bottom: 19px !important;
+    margin-left: -5px !important;
+    margin-top: -17px !important;
+}
+
+
+
+/*Hover Icons Details*/
+
+.btn-default-basic:hover, .btn-default:hover, .btn-default:hover, .btn-default.disabled:hover, :disabled.btn-default:hover, .btn-hover-default:hover, .btn-hover-default:hover, .btn-hover-default.active, .btn.btn-active-default:hover {
+    background-color: #a6cad8 !important;
+}
+
+.btn-default {
+    font-size: 20px !important;
+}
+
+.page-header {
+    margin-left: -12px !important;
+}
+
+.custom-task-type {
+    padding-right: 20px !important;
+}
+
+.custom-radio-button {
+    padding-left: 20px !important;
+    margin-left: 19px !important;
+}
+
+.custom-radio-task {
+    padding-left: 40px !important;
+}
+
+
+
+.btn-mint-basic, .btn-mint, .btn-mint:focus, .btn-mint.disabled:hover, :disabled.btn-mint:hover, .btn-hover-mint:hover, .btn-hover-mint:active, .btn-hover-mint.active, .btn.btn-active-mint:active, .btn.btn-active-mint.active, .dropdown.open > .btn.btn-active-mint, .btn-group.open .dropdown-toggle.btn.btn-active-mint {
+    background-color: #5097ab !important;
+    border-color: #007a93 !important;
+}
+
+
+
+.panel-footer {
+    background-color: white !important;
+
+}
+
+.custom-modal-button {
+    font-size: 14px !important;
+    border: none !important;
+    margin-left: 24px !important;
+    background-color: #e6e6e6 !important;
+    color: #707070 !important;
+}
+
+.custom-modal-button:hover {
+    background-color: #e6e6e6 !important;
+} 
+    
+.custom-modal-button-div {
+        margin-top: -30px !important;
+        padding-bottom: 0px !important;
+}
+
+.modal-content {
+    width: 800px !important;
+    height: 700px !important;
+}
+
+.custom-modal-title {
+    text-align: left !important;
+    margin-top: -9px;
+}
+
+.custom-modal-radio-title {
+    text-align: left!important;
+    margin-top: -8px !important;
+}
+
+.custom-modal-right {
+    margin-left: 25px !important;
+}
+
+.table-condensed {
+    margin-left: 193px;
+}
+
+.custom-modal-height {
+    height: 547px !important;
+}
+
+.custom-modal-table {
+    float: left;
+    height: 100px;
+}
+
+.custom-modal-table-arrow {
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 12px;
+    
+}
+
+.custom-modal-table1 {
+    height: 100px;
+}
+
+.custom-modal-arrow {
+    margin-top: 23px;
+    background-color: #e6e6e6 !important;
+    border-color: #9e9e9e !important;
+    color: #9e9e9e !important;
+}
+
+.custom-modal-arrow1 {
+    margin-top: -60px;
+    margin-left: -37px;
+    background-color: #e6e6e6 !important;
+    border-color: #9e9e9e !important;
+    color: #9e9e9e !important;
+}
+
+.custom-modal-height {
+    /*max-height: 100px;*/
+    min-width: 500px;
+    overflow: auto;
+}
+
+.note-editor {
+    width: 700px;
+    margin-left: 189px;
+    margin-top: -2px !important;
+}
+
+.custom-modal-button-documents {
+   margin-bottom: 15px;
+}
+
+
+.custom-float-left {
+    float: left;
+}
+
+.custom-float-right {
+    margin-left: 570px;
+}
+
+.custom-panel-float {
+    width: 540px !important;
+    height: 170px !important;
+}
+
+.custom-panel-margin {
+    width: 540px !important;
+    height: 170px !important;
+}
+
+.custom-panel-member {
+   /* width: 300px;*/
+    height: 208px;
+    margin-bottom: 20px;
+}
+
+.custom-modal-button-exit-position {
+    /*margin-top: 295px;*/
+    float: right;
+}
+
+.note-editing-area {
+    height: 140px !important;
+}
+
+/*Documents details and Modal*/
+.custom-document-show {
+    margin-top: -28px !important;
+    margin-bottom: -16px !important;
+}
+
+.bord-ver {
+    border-bottom: #e6e6e6 !important;
+}
+
+.custom-document-title {
+    margin-left: 12px !important;
+}
+
+.custom-documents-drop {
+    margin-left: 168px !important;
+}
+
+.custom-documents-drop-title2 {
+    margin-left: 165px !important;
+}
+
+.custom-documents-button {
+    margin-top: 278px;
+    margin-left: 593px;
+}
+
+.custom-documents-modal-dialog {
+    width: 715px !important;
+    float: left!important;
+}
+
+.custom-documents-main-check {
+    float: left;
+}
+
+.custom-documents-check {
+    float: both;
+    margin-top: 10px;
+}
+
+.custom-documents-check1 {
+    float: both;
+    margin-top: 17px;
+}
+
+.custom-documents-check2 {
+    float: both;
+    margin-top: 53px;
+}
+
+.custom-documents-check3 {
+    float: both;
+    margin-top: 19px;
+}
+
+.custom-documents-check4 {
+    float: both;
+    margin-top: 55px;
+}
+
+.custom-documents-check5 {
+    float: both;
+    margin-top: 18px;
+}
+
+.custom-document-button {
+    padding-top: 38px !important; 
+    padding-left: 258px !important;
+}
+
+
+/**------------- Selectbox Styling: Individual Person Icon -------------------**/
+
+.selectdiv {
+  position: relative;
+  width: 480px;
+}
+
+.selectdiv1:after {
+    content: '\f007';
+	font: normal normal normal 17px/1 FontAwesome;
+	right: 0px;
+	top: 1px;
+	padding-top: 7px;
+	padding-right: 20px;
+	padding-left: 10px;
+	height: 30px;
+	float: right;
+    border-left: 1px solid #eeeeee;
+    position: absolute;
+    pointer-events: none;
+}
+
+
+.selectdiv2:after {
+    content: '\f00c';
+	font: normal normal normal 17px/1 FontAwesome;
+	right: 0px;
+	top: 1px;
+	padding-top: 7px;
+	padding-right: 18px;
+	padding-left: 8px;
+	height: 30px;
+	float: right;
+    border-left: 1px solid #eeeeee;
+    position: absolute;
+    pointer-events: none;
+}
+
+.selectdiv3:after {
+	font: normal normal normal 17px/1 FontAwesome;
+	right: 0px;
+	top: 1px;
+	padding-top: 7px;
+	padding-right: 18px;
+	padding-left: 8px;
+	height: 30px;
+	float: right;
+    border-left: 1px solid #eeeeee;
+    position: absolute;
+    pointer-events: none;
+}
+
+/*----------------  Meeting Site  ---------------*/
+
+.custom-meeting-drop-left {
+    width: 200px;
+
+}
+
+.custom-meeting-drop-right {
+
+}
+
+#demo-calendar {
+    /*float: right;
+    margin-right: -634px;
+    padding-left: 193px;
+    margin-top: -370px;*/
+}
+
+.custom-modal-content-meeting {
+    width: 1300px !important;
+    height: 860px !important;
+    margin-top: 42px;
+    margin-left: -164px;
+}
+
+.custom-meeting-table {
+    /*padding-top: 40px !important;*/
+}
+
+.custom-meeting-height {
+    /*height: 634px !important;*/
+}
+
+.fc-day {
+    height: 100px !important;
+}
+
+.custom-modal-meeting-navigation-left {
+    /*border: 1px solid #e7ecf3;*/
+    width: 350px;
+}
+
+.custom-modal-meeting-column {
+    margin-left: 20px !important;
+    margin-top: 1px !important;
+}
+
+.custom-meeting-modal-header {
+    width: 200px;
+    margin-left: 254px;
+}
+
+.custom-meeting-template {
+    margin-top:  18px;
+    margin-left: 40px;
+}
+
+.custom-meeting-panel {
+    margin-top: 0px !important;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    border: none!important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none!important;
+    width: 545px;
+    margin-left: 135px;
+}
+
+.custom-meeting-panel-heading1 {
+    margin-top: -1px !important;
+}
+
+.custom-meeting-panel-heading2 {
+    margin-top: -1px !important;
+}

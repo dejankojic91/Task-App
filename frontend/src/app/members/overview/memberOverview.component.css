@@ -1,0 +1,23 @@
+#page-title{
+    margin-bottom: 20px;
+}
+#page-content {
+    padding: 15px 15px 0;
+}
+
+.member-header{
+    background-color: #C8A0A0;
+    color: #2b425b;
+}
+
+.panel-body {
+    padding: 15px 0px 25px;
+}
+.padd{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.img-md{
+    padding: 10px 10px;
+}

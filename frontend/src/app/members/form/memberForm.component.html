@@ -1,0 +1,73 @@
+<div id="form-panel">
+  <div class="col-sm-8 col-sm-offset-2">
+    <div  class="panel bg-white custom-panel-member">
+      <!--Panel Header-->
+      <div class="media panel-header member-header" >
+          <!--Member Image-->
+          <div class="media-left">
+              <img alt="Profile Picture" class="img-lg img-circle" [src]="member?.profileImage">
+          </div>
+          <!--Member First and Last Name-->
+          <div class="media-body pad-top">
+              <span class="text-lg text-semibold">{{member?.firstName}}, {{member?.lastName}}</span>
+              <p class="text-sm">{{member?.function}}</p>
+          </div>
+      </div>
+      <!--Panel Header-->
+      <!--Panel Body-->
+      <div class="list-group bg-trans panel-body">
+          <div class="container">
+            <div class="member-form col-md-10">
+              <form class="form-horizontal" #f="ngForm">
+                <!--Function-->
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="function">Function:</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="function" name="function" placeholder="" ngModel>
+                  </div>
+                </div>
+                <!--Function-->
+                <!--Pnone-->
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="phone">Pnone:</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="" ngModel>
+                  </div>
+                </div>
+                <!--Pnone-->
+                <!--Mobile Pnone-->
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="mobilePhoneNumber">Mobile Pnone:</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="mobilePhoneNumber" name="mobilePhoneNumber" placeholder="" ngModel>
+                  </div>
+                </div>
+                <!--Mobile Pnone-->
+                <!--Group-->
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="group">Group:</label>
+                  <div class="col-sm-8">
+                      <select id="group" class="form-control" [ngModel]="group" name="group">
+                          <option value="Developers">Developers</option>
+                          <option value="Designers">Designers</option>
+                          <option value="QA">QA</option>
+                      </select>
+                  </div>
+                </div>
+                <!--Group-->
+              </form>
+            </div>
+          </div>
+      </div>
+      <!--Panel Body-->
+      <!--Panel Footer-->
+      <div class="panel-footer">
+        <div class="pull-right">
+            <button class="btn btn-primary" type="button" (click)="onSubmit()">Save</button>
+            <button class="btn btn-primary" type="button" (click)="closeForm()">Cancle</button>
+        </div>
+      </div>
+      <!--Panel Footer-->
+    </div>
+  </div>
+</div>

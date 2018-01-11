@@ -1,0 +1,33 @@
+.btn-default {
+    font-size: 14px !important;
+}
+
+.btn-top{
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-left: 0px !important;
+}
+
+#page-content {
+    padding: 0px 15px 0;
+}
+
+.color-high {
+    color: #72170c;
+  }
+  
+  .color-middle {
+    color: #e69123;
+  }
+  
+  .color-low {
+    color: #2b425b;
+  }
+
+  .pencil_comment{
+    float: right;
+    position: absolute;
+    right: 11px;
+    top: 12px;
+    cursor: pointer;
+  }

@@ -1,0 +1,85 @@
+<div id="content-container">
+    <div id="page-title">
+        <button
+        [routerLink]="['/members/edit', member?._id]"
+            class="btn btn-primary btn-sm"
+            style="float: left; color: white; background-color: #00677f  !important;"><i class="ion-edit"></i> Edit Member</button>
+    </div>
+    <div class="row">
+        <div id="page-content">
+            <div class="col-md-8">
+                <div id="member-panel" class="panel">
+                    <div class="panel-body">
+                        <div class="pad-all bg-white">
+                            <!-- Panel Name And Picture -->
+                            <div class="media pad-btm">
+                                <!--Member Profile Img-->
+                                <div class="media-left">
+                                    <img alt="Profile Picture" class="img-lg img-circle img-border-light" [src]="member?.profileImage">
+                                </div>
+                                <div class="media-body pad-top">
+                                    <!--Member First and Last Name-->
+                                    <span class="text-3x text-semibold">{{member?.firstName}}, {{member?.lastName}}</span>
+                                    <!--Member Function-->
+                                    <p class="text-2x">{{member?.function}}</p>
+                                    <!--Member Group-->
+                                    <span class="label label-default">{{member?.group}}</span>
+                                </div>
+                            </div>
+                            <!-- Panel Name And Picture -->
+
+                            <!--About me-->
+                            <div class="list-group bord-no bg-trans">
+                                <div class="list-group-item  list-item-xl">
+                                    <div class="pad-top bord-btm">
+                                        <span class="text-lg">About me</span>
+                                    </div>
+                                    <div class="pad-ver">
+                                        <dl class="dl-horizontal">
+                                            <dt style="width: inherit;">First Name:</dt>
+                                            <dd>{{member?.firstName}}</dd>
+                                            <dt style="width: inherit;">Last Name:</dt>
+                                            <dd>{{member?.lastName}}</dd>
+                                            <dt style="width: inherit;">Username:</dt>
+                                            <dd>{{member?.username}}</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--About me-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Contact Info-->
+            <div class="col-md-4">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Contact information</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="media">
+                            <div class="media-left">
+                                <i class="ion-email text-main icon-3x"></i>
+                            </div>
+                            <div class="media-body">{{member?.email}}</div>
+                        </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <i class="ion-ios-telephone text-main icon-3x"></i>
+                            </div>
+                            <div class="media-body">{{member?.phoneNumber}}</div>
+                        </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <i class="ion-printer text-main icon-3x"></i>
+                            </div>
+                            <div class="media-body">{{member?.mobilePhoneNumber}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Contact Info-->
+        </div>
+    </div>
+</div>

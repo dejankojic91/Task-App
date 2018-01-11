@@ -1,0 +1,20 @@
+#page-title{
+    margin-bottom: 20px;
+}
+#page-content {
+    padding: 15px 14px 0;
+}
+
+.task-header{
+    background-color: #C8DCB4;
+}
+
+.desc-height{
+    display: block;
+    overflow: hidden;
+    line-height: 16px;
+    min-height: 50px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    max-height: 30px;
+}

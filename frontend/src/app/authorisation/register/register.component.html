@@ -1,0 +1,140 @@
+<div id="content-container">
+    <div class="register-form">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="panel panel-login">
+                        <!--Panel Header-->
+                        <div class="panel-heading">
+                            <div class="row">
+                                <!--Login-->
+                                <div class="col-xs-6" style=" padding-top: 10px;">
+                                    <a routerLinkActive="active"
+                                        routerLink="/login"
+                                        id="login-form-link">Login</a>
+                                </div>
+                                <!--Login-->
+                                <!--Register-->
+                                <div class="col-xs-6" style=" padding-top: 10px;">
+                                    <a routerLinkActive="active"
+                                        routerLink="/register"
+                                        id="register-form-link">Register</a>
+                                </div>
+                                <!--Register-->
+                            </div>
+                            <hr>
+                        </div>
+                        <!--Panel Header-->
+                        <!--Panel Body-->
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <form id="register-form" [formGroup]="formRegister">
+                                        <!--First Name-->
+                                        <div class="form-group" [ngClass]="displayFieldCss('firstName')">
+                                            <input
+                                                type="text"
+                                                id="firstName"
+                                                class="form-control"
+                                                placeholder="First Name"
+                                                formControlName="firstName">
+                                                <app-field-error-display 
+                                                    [displayError]="isFieldValid('firstName')" 
+                                                    errorMsg="Please enter your First Name">
+                                                </app-field-error-display>
+                                        </div>
+                                        <!--First Name-->
+                                        <!--Last Name-->
+                                        <div class="form-group" [ngClass]="displayFieldCss('lastName')">
+                                            <input
+                                                type="text"
+                                                id="lastName"
+                                                class="form-control"
+                                                placeholder="Last Name"
+                                                formControlName="lastName">
+                                                <app-field-error-display 
+                                                [displayError]="isFieldValid('lastName')" 
+                                                errorMsg="Please enter your Last Name">
+                                                </app-field-error-display>
+                                        </div>
+                                        <!--Last Name-->
+                                        <!--Username-->
+                                        <div class="form-group" [ngClass]="displayFieldCss('username')">
+                                            <input
+                                                type="text"
+                                                id="username"
+                                                class="form-control"
+                                                placeholder="Username"
+                                                formControlName="username">
+                                                <app-field-error-display 
+                                                [displayError]="isFieldValid('username')" 
+                                                errorMsg="Please enter your Username">
+                                                </app-field-error-display>
+                                            
+                                        </div>
+                                        <!--Username-->
+                                        <!--Email Address-->
+                                        <div class="form-group" [ngClass]="displayFieldCss('email')">
+                                            <input
+                                                type="email"
+                                                id="email"
+                                                class="form-control"
+                                                placeholder="Email Address"
+                                                formControlName="email">
+                                                <app-field-error-display 
+                                                [displayError]="isFieldValid('email')" 
+                                                errorMsg="Please enter your Email Address">
+                                                </app-field-error-display>
+                                        </div>
+                                        <!--Email Address-->
+                                        <!--Password-->
+                                        <div class="form-group" [ngClass]="displayFieldCss('password')">
+                                            <input
+                                                type="password"
+                                                id="password"
+                                                class="form-control"
+                                                placeholder="Password"
+                                                formControlName="password">
+                                                <app-field-error-display 
+                                                [displayError]="isFieldValid('password')" 
+                                                errorMsg="Please enter your Password">
+                                                </app-field-error-display>
+                                        </div>
+                                        <!--Password-->
+                                        <!--Profile Image-->
+                                        <div class="form-group"  style="text-align:center;">
+                                            <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                <span class="btn btn-default btn-file">
+                                                    <span>Choose profile image</span>
+                                                    <input type="file" id="profileImg" name="profileImg" type="file" (change)="fileChangeEvent($event)" accept="image/*"/>
+                                                </span>
+                                            </div>
+                                            <img *ngIf="imgSrc" [src]="imgSrc" style="width: 50%; margin-top: 20px; height: auto;">
+                                        </div>
+                                        <!--Profile Image-->
+                                        <!--Submit Btn-->
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <input
+                                                        type="submit"
+                                                        name="register-submit"
+                                                        id="register-submit"
+                                                        class="form-control btn btn-register"
+                                                        value="Register Now"
+                                                        (click)="onSubmit()">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Submit Btn-->
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Panel Body-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

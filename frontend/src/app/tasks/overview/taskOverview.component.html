@@ -1,0 +1,44 @@
+<div id="content-container">
+    <div id="page-title">
+        <div class="btn-group" style="float: left;">
+            <button [routerLink]="['/tasks/new']" class="btn btn-sm btn-petrol" style="color: white;">New Task</button>
+        </div>
+        <!--Searchbox-->
+        <search-box></search-box>
+    </div>
+    <div id="page-content">
+        <div class="row">
+            <div class="col-md-4" *ngFor="let task of allTasks">
+                <a [routerLink]="['/tasks/display', task._id]">
+                    <div id="panel-task-12" class="panel " >
+                        <!--Panel Header-->
+                        <div class="panel-heading task-header">
+                            <div class="panel-custom-label"><span class="label label-progress">{{ task?.status}}</span> </div>
+                            <div class="panel-custom-title"><h3 class="panel-title" href="">{{ task?.title }}</h3> </div>
+                        </div>
+                        <!--Panel Header-->
+                        <!--Panel Body-->
+                        <div class="panel-body">
+                            <div class="list-group bord-no">
+                                <div class="media-left pos-rel">
+                                    <img class="img-circle img-xs" [src]="task.user?.url" alt="Profile Picture">
+                                </div>
+                                <div class="media-body">
+                                    <p class="mar-no">{{ task.user?.firstName}} {{ task.user?.lastName}}</p>
+                                    <small class="text-muted custom-line-cap desc-height">{{ task?.description }}</small>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Panel Body-->
+                        <!--Panel Footer-->
+                        <div class="panel-footer">
+                            <span class="label label-default" *ngIf="task.priority">{{ task?.priority }}</span>
+                            <span class="label label-default" *ngIf="task.problemStatus">{{ task?.problemStatus }}</span>
+                        </div>
+                        <!--Panel Footer-->
+                    </div>
+                </a>    
+            </div>
+        </div>
+    </div>
+</div>

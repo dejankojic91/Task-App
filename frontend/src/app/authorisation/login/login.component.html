@@ -1,0 +1,88 @@
+<div id="content-container">
+
+<div class="login-form">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="panel panel-login">
+                    <!--Panel Header-->
+                    <div class="panel-heading">
+                        <div class="row">
+                            <!--Login-->
+                            <div class="col-xs-6" style="padding-top: 10px;">
+                                <a routerLinkActive="active"
+                                    routerLink="/login"
+                                    id="login-form-link">Login</a>
+                            </div>
+                            <!--Login-->
+                            <!--Register-->
+                            <div class="col-xs-6" style="padding-top: 10px;">
+                                <a routerLinkActive="active"
+                                    routerLink="/register"  
+                                    id="register-form-link">Register</a>
+                            </div>
+                            <!--Register-->
+                        </div>
+                        <hr>
+                    </div>
+                    <!--Panel Header-->
+                    <!--Panel Body-->
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <form id="login-form" [formGroup]="formLogin">
+                                    <!--Email-->
+                                    <div class="form-group" [ngClass]="displayFieldCss('email')">
+                                        <input 
+                                            type="text"  
+                                            id="email" 
+                                            class="form-control" 
+                                            placeholder="Email"
+                                            formControlName="email">
+                                            <app-field-error-display 
+                                            [displayError]="isFieldValid('email')" 
+                                             errorMsg="Oops! Email is incorrect.">
+                                        </app-field-error-display>
+                                    </div>
+                                    <!--Email-->
+                                    <!--Password-->
+                                    <div class="form-group" [ngClass]="displayFieldCss('password')">
+                                        <input 
+                                            type="password"
+                                            id="password"
+                                            class="form-control"
+                                            placeholder="Password"
+                                            formControlName="password">
+                                            <app-field-error-display 
+                                            [displayError]="isFieldValid('password')" 
+                                             errorMsg="Oops! Password is incorrect.">
+                                        </app-field-error-display>
+                                    </div>
+                                    <!--Password-->
+                                    <!--Submit Btn-->
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <input 
+                                                type="submit" 
+                                                name="login-submit" 
+                                                id="login-submit" 
+                                                class="form-control btn btn-login" 
+                                                value="Log In"
+                                                (click)="onSubmit()">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Submit Btn-->
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Panel Body-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>

@@ -1,0 +1,166 @@
+<div id="content-container">
+    <div id="page-content">
+        <div class="col-sm-8 table-toolbar-left btn-top">
+            <button [routerLink]="['/tasks/edit', task?._id]" class="btn btn-sm btn-petrol" style="color: white; padding: 6px 10px;"><i class="ion-edit"></i> Edit</button>
+            <button class="btn btn-sm btn-default add-tooltip" data-original-title="Delete" (click)="deleteTaks(task._id)"><i class="ion-trash-a"></i></button>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div id="panel-task-12" class="panel">
+                    <div class="panel-body">
+                        <div class="tab-content">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="mar-btm pad-btm">
+                                        <h1 class="page-header text-overflow">
+                                            <span class="label label-normal label-progress">{{ task?.status}}</span>
+                                            <span class="label-custom-title">{{ task?.title }}</span>
+                                        </h1>
+                                    </div>
+                                </div>
+                                <div class="panel-body text-center">
+                                    <div class="pull-right text-right">
+                                        <p class="mar-no"><small class="text-adjusted">{{ task?.date | date: 'dd/MM/yyyy' }}</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pad-ver bord-ver">
+                                <div class="panel-custom-details-text">
+                                    {{ task?.description }}<br><br>
+                                </div>
+                            </div>
+                            <div class="pad-ver mar-ver">
+                                <p class="text-main text-bold box-inline"><i class="psi-paperclip icon-fw"></i> Documents <span>(2) </span></p>
+                                <ul class="mail-attach-list list-ov">
+                                    <li *ngFor="let file of task?.attachment">
+                                        <a class="thumbnail" target="_blank" href="{{file?.url}}">
+                                            <div class="mail-file-icon">
+                                                <i class="pli-file-csv"></i>
+                                            </div>
+                                            <div class="caption">
+                                                <p class="text-primary mar-no">{{file?.name}}</p>
+                                                <small class="text-muted">Added: May 10, 2016</small>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="timeline">
+                                <div class="timeline-header bg-gray well-xs">
+                                    <p class="text-main text-bold"><i class="psi-notepad icon-fw"></i> Comments
+                                    </p>
+                                </div>
+                                    <!--DISPLAY ALL COMMENTS-->
+                                    <div class="timeline-entry" *ngFor="let comment of comments">
+                                        <div class="timeline-stat">
+                                            <div class="timeline-icon">
+                                                <img class="img-circle img-xs" [src]="comment?.createdBy?.url" alt="Profile Picture">
+                                            </div>
+                                            <div class="timeline-time">{{ comment.createdAt | date:'dd-MM-yyyy HH:mm' }}</div>
+                                        </div>
+                                        <div class="timeline-label" (mouseenter)="comment.editvisible = true;" (mouseleave)="comment.editvisible = false;">
+                                            <div *ngIf="!comment.livevisible">
+                                                <span class="text-bold">{{ comment.createdBy.firstName }} {{ comment.createdBy.lastName }}</span>
+                                                <div class="comment_br">
+                                                    {{comment.comment}}
+                                                </div>
+                                            </div>
+                                            <div *ngIf="comment.livevisible">
+                                                <div class="row">
+                                                    <div class="col-xs-10">
+                                                        <textarea [(ngModel)] = "updateCommentData" id="ta-{{ comment._id }}" style="width: 100%; resize:none;" class="form-control" placeholder="Add your comment" rows="3"></textarea>
+                                                    </div>
+                                                    <div class="col-xs-2" style="margin-top: 15px;">
+                                                        <button class="btn btn-petrol" style="color: white;" type="button"  (click)="submitUpdateComment($event, comment._id)">Update</button>
+                                                        <button class="btn btn-petrol" style="color: white;" type="button"  (click)="hideCommentArea($event, comment)">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span class="pencil_comment" *ngIf="comment.createdBy._id == currentUserId && comment.editvisible && !comment.livevisible" (click)="showCommentArea(comment)"><i  class="fa fa-pencil" aria-hidden="true"></i></span>
+                                        </div>
+                                    </div>
+                                    <!--NEW COMMENT-->
+                                    <div class="timeline-entry">
+                                        <div class="timeline-stat">
+                                            <div class="timeline-icon bg-petrol"><i class="psi-speech-bubble-3 icon-lg"></i></div>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <div class="row">
+                                                <div class="col-xs-10">
+                                                    <textarea [(ngModel)] = "newComment" style="width: 100%; resize:none;" class="form-control" placeholder="Add your comment" rows="3"></textarea>
+                                                </div>
+                                                <div class="col-xs-2" style="margin-top: 15px;">
+                                                    <button class="btn btn-petrol" style="color: white;" type="button" (click)="submitComment($event)">Comment</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---->
+            <div class="col-md-4">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">General</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="media">
+                            <div class="media-left">
+                                <i class="fa fa-circle fa-2x" [ngClass]="resolvePriorityColor(task?.priority)"></i>
+                            </div>
+                            <div class="media-body">
+                                <p class="text-main text-lg mar-no"> {{ task?.priority }}</p>
+                                Priority
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <i class="fa fa-exclamation-triangle fa-2x" [ngClass]="resolvePriorityColor(task?.problemStatus)"></i>
+                            </div>
+                            <div class="media-body">
+                                <p class="text-main text-lg mar-no">{{ task?.problemStatus }}</p>
+                                Problem status
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Task Owner</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="list-group bord-no">
+                            <div class="media-left pos-rel">
+                                <img class="img-circle img-xs" [src]="task?.user?.url" alt="Profile Picture">
+                            </div>
+                            <div class="media-body">
+                                <a *ngIf="task" [routerLink]="['/members/display', task.user._id]" target="_blank">
+                                     <p class="mar-no">{{ task?.user.firstName }} {{ task?.user.lastName }}</p>
+                                </a>
+                                <small class="text-muted">Task owner</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Assigned to</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="list-group bord-no">
+                            <div class="media-left pos-rel">
+                            </div>
+                            <div class="media-body">
+                                <p class="mar-no">Brittany Meyer</p>
+                                <small class="text-muted">Product owner</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </div>
+</div>
